@@ -22,6 +22,9 @@ psudo:
     [float] output price
     [const int] discount percent
     [float] discount value
+
+feedback: shouldnt allow neg inputs and % needs to be 0-100
+
 */
 
 
