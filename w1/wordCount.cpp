@@ -10,6 +10,8 @@ using namespace std;				//using standard namespace
 
 int numberOfWords;					//declare variables
 char letter;
+char lastLetter = ' ';
+
 
 /* count number of words in a piece of text
 **/
@@ -23,9 +25,17 @@ int main()
 	cin.get(letter);					//read any character (even space)...
 	while (letter != '.') 			// ... and count words
 	{
-		if (letter == ' ')
-			numberOfWords = numberOfWords + 1;
+		if (letter == ' '){
+                        //cout << "8" << letter << lastLetter << "8\n";
+                        if (lastLetter != letter){
+                              numberOfWords = numberOfWords + 1;
+                              //cout << "\nword counted\n";
+                        }
+                }
+
+                lastLetter = letter;
 		cin.get(letter);
+
 	}
 	if (numberOfWords >= 0)
 		numberOfWords = numberOfWords + 1;	//take last word into account
