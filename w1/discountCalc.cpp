@@ -1,5 +1,6 @@
 #include <iostream>
 #include <tuple>
+#include <cmath>
 using namespace std;
 
 /*
@@ -35,11 +36,15 @@ int main(){
 
 
 tuple<float, float> getDiscountValues(){
-  cout << "Input the value to discount\n";
-  float origPrice = (float)cin;
+  cout << "Input the value to discount\n£ ";
+
+  float origPrice;
+  cin >> origPrice;
   cout << "Input the percent to discount\n";
-  float discountPercent = (float)cin;
-  return tuple<float,float> (discountPercent,discountPercent);
+  float discountPercent;
+  cin >> discountPercent;
+
+  return tuple<float,float> (origPrice,discountPercent);
 }
 
 
@@ -50,5 +55,7 @@ float produceDiscountedPrice(tuple<float, float> inVars){
   float priceOut, discountValue;
   discountValue = priceIn*(discountPercentIn*0.01); 
   priceOut = priceIn-discountValue;
+
+  priceOut = roundf(priceOut* 100) / 100; // round to nearest penny
   return priceOut;
 }
