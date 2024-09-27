@@ -32,6 +32,16 @@ float produceDiscountedPrice(tuple<float, float>);
 tuple<float, float> getDiscountValues();
 
 
+float myFloatClamp(float varIn, float minVar, float maxVar){
+  if (varIn < minVar){
+    return minVar;
+  }else if (varIn > maxVar){
+    return maxVar;
+  }
+  return varIn;
+}
+
+
 int main(){
   cout << produceDiscountedPrice(getDiscountValues());
   return 0;
@@ -46,6 +56,10 @@ tuple<float, float> getDiscountValues(){
   cout << "Input the percent to discount\n";
   float discountPercent;
   cin >> discountPercent;
+
+  origPrice = abs(origPrice);
+  
+  discountPercent = myFloatClamp(discountPercent, 0, 100);
 
   return tuple<float,float> (origPrice,discountPercent);
 }
