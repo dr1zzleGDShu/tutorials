@@ -2,8 +2,8 @@
 using namespace std;
 
 
-int calcAnnualSalary(int);
-int calcDecSalary(int);
+float calcAnnualSalary(int);
+float calcDecSalary(int);
 
 
 int main(){
@@ -17,14 +17,14 @@ int main(){
 
 
 
-int calcAnnualSalary(int pointsIn){
-  int baseSal = pointsIn*2000;
+float calcAnnualSalary(int pointsIn){
+  float baseSal = pointsIn*2000;
   return baseSal*1.025;
 }
 
 
-int calcDecSalary(int pointsIn){
-  int baseSal = pointsIn*2000;
-  int bonus = (baseSal*1.025)-baseSal;
+float calcDecSalary(int pointsIn){
+  float baseSal = pointsIn*2000;
+  float bonus = (baseSal*1.025)-baseSal;
   return (baseSal/12)+bonus;
 }
