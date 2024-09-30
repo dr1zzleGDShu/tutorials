@@ -44,6 +44,7 @@ float myFloatClamp(float varIn, float minVar, float maxVar){
 
 int main(){
   cout << produceDiscountedPrice(getDiscountValues());
+  cout << endl;
   return 0;
 }
 
@@ -74,5 +75,6 @@ float produceDiscountedPrice(tuple<float, float> inVars){
   priceOut = priceIn-discountValue;
 
   priceOut = roundf(priceOut* 100) / 100; // round to nearest penny
+  cout << "Final value after discount £"; // amazing bodge to get the formatting right
   return priceOut;
 }
