@@ -10,7 +10,7 @@ float calculateDecemberSalary(float, float); //work out December salary
 int myClampInt(int, int, int);
 
 
-int main()			//computeDecemberSalary
+int salaryHwMain()			//computeDecemberSalary
 {
 
   //read in the salary point

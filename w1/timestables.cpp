@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-int main()
+int timetablesMain()
 {
   cout << "Please enter your name: ";
   string name;

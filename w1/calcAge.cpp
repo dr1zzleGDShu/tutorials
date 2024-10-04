@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int main()
+int calcAgeMain()
 {
   int birthYear;
   cout << "Enter your birth year: ";

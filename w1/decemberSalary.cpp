@@ -6,7 +6,7 @@ float calcAnnualSalary(int);
 float calcDecSalary(int);
 
 
-int main(){
+int decemberSalaryMain(){
   int salPoints;
   cout << "Enter Salary points: ";
   cin >> salPoints;

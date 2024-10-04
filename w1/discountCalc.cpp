@@ -42,7 +42,7 @@ float myFloatClamp(float varIn, float minVar, float maxVar){
 }
 
 
-int main(){
+int discountCalcMain(){
   cout << produceDiscountedPrice(getDiscountValues());
   cout << endl;
   return 0;

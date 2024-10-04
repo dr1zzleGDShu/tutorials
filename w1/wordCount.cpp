@@ -15,7 +15,7 @@ char lastLetter = ' ';
 
 /* count number of words in a piece of text
 **/
-int main()
+int wordCountMain()
 {
 	cout << "\nThis program counts the number of words in a text ";
 	cout << "\n(ending with '.', single spaces between words) ";

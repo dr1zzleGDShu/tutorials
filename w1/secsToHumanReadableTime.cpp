@@ -6,7 +6,7 @@ using namespace std;
 void secsToHMS(int);
 
 
-int main(){
+int secsToHumanReadableTimeMain(){
   int secsInputted;
   cout << "Enter a time in seconds: ";
   cin >> secsInputted;

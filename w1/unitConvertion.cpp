@@ -12,7 +12,7 @@ float convertInchesToMetres(float);
 
 
 // implements convertLengthFromImperialToMetric program
-int main()
+int unitConversionMain()
 {
   showMetricMeasurement(convertFeetAndInchesIntoMetres(readInImperialMeasurement()));
   return 0;

@@ -1,0 +1,5 @@
+﻿  w1Monolith.cpp
+C:\Users\c4024637\source\repos\miscRepo\w1Monolith.cpp(61,30): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\c4024637\source\repos\miscRepo\w1Monolith.cpp(127,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\c4024637\source\repos\miscRepo\w1Monolith.cpp(238,20): warning C4305: 'initializing': truncation from 'double' to 'float'
+  miscRepo.vcxproj -> C:\Users\c4024637\source\repos\miscRepo\x64\Debug\miscRepo.exe
