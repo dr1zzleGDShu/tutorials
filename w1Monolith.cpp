@@ -80,8 +80,10 @@ namespace salaryHw {
 }
 
 namespace calcDiscount {
-	float produceDiscountedPrice(tuple<float, float>);
-	tuple<float, float> getDiscountValues();
+	//float produceDiscountedPrice(tuple<float, float>);
+	float produceDiscountedPrice();
+	//tuple<float, float> getDiscountValues();
+	void getDiscountValues();
 
 
 	float myFloatClamp(float varIn, float minVar, float maxVar) {
@@ -96,36 +98,42 @@ namespace calcDiscount {
 
 
 	int discountCalcMain() {
-		cout << produceDiscountedPrice(getDiscountValues());
+		//cout << produceDiscountedPrice(getDiscountValues());
+		cout << produceDiscountedPrice();
 		cout << endl;
 		return 0;
 	}
 
 
-	tuple<float, float> getDiscountValues() {
+	//tuple<float, float> getDiscountValues() {
+	void getDiscountValues(float& origPrice, float& discountPercent) {
 		cout << "Input the value to discount\n£ ";
 
-		float origPrice;
+		//float origPrice;
 		cin >> origPrice;
 		cout << "Input the percent to discount\n";
-		float discountPercent;
+		//float discountPercent;
 		cin >> discountPercent;
 
 		origPrice = abs(origPrice);
 
 		discountPercent = myFloatClamp(discountPercent, 0, 100);
 
-		return tuple<float, float>(origPrice, discountPercent);
+		//return tuple<float, float>(origPrice, discountPercent);
 	}
 
+	//float produceDiscountedPrice(tuple<float, float> inVars) {
+	float produceDiscountedPrice() {
 
-	float produceDiscountedPrice(tuple<float, float> inVars) {
+		float origPrice, discountPercent;
 
-		float priceIn = get<0>(inVars);  float discountPercentIn = get<1>(inVars);
+		getDiscountValues(origPrice, discountPercent);
+
+		//float priceIn = get<0>(inVars);  float discountPercentIn = get<1>(inVars);
 
 		float priceOut, discountValue;
-		discountValue = priceIn * (discountPercentIn * 0.01);
-		priceOut = priceIn - discountValue;
+		discountValue = origPrice * (discountPercent * 0.01);
+		priceOut = origPrice - discountValue;
 
 		priceOut = roundf(priceOut * 100) / 100; // round to nearest penny
 		cout << "Final value after discount £"; // amazing bodge to get the formatting right
@@ -257,11 +265,11 @@ namespace calcAge {
 
 int main() {
 	//salaryHw::salaryHwMain();
-	//calcDiscount::discountCalcMain();
+	calcDiscount::discountCalcMain();
 	//
 	//wc::wordCountMain();
 	//unitConvert::unitConversionMain();
-	calcAge::calcAgeMain();
+	//calcAge::calcAgeMain();
 	system("pause");
 
 }
